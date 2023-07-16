@@ -10,8 +10,43 @@
 		<title>Astro</title>
 	</head>
 	<body>
-        <div style="display: flex; justify-content: center;">
-            <img src="/site-under-construction.png" alt="perrito albañil" style="width: 600px; height: 500px">
+        <div class="container">
+            <img id="dog" src="/site-under-construction.png" alt="perrito albañil">
         </div>
 	</body>
 </html>
+
+<style>
+
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+
+    @media screen and (max-width: 767px) {   
+        #dog{
+            width: 300px;
+            height: 250px;
+        } 
+    }
+
+    @media screen and (min-width: 768px) {      
+        #dog{      
+            width: 600px;
+            height: 500px;
+        } 
+    } 
+    @media (min-width: 992px) {      
+          #dog{        
+            width: 600px;
+            height: 500px;
+          } 
+    }
+    @media (min-width: 1200px) {    
+         #dog{         
+            width: 600px;
+            height: 500px;
+         } 
+    }
+
+</style>
