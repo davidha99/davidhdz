@@ -1,52 +1,63 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-        <div class="container">
-            <img id="dog" src="/site-under-construction.png" alt="perrito albañil">
-        </div>
-	</body>
-</html>
+<BaseLayout title="David Hernandez">
+  <div class="hero">
+    <div class="typewriter">
+      <h1>Hi, I'm David<br />Front End Developer</h1>
+    </div>
+    <p>I'm a 24-year-old new graduate from Tec de Monterrey.</p>
+    <p>
+      As I've grown as a developer, I've worked alonside senior enigneers and
+      developers who have raised my standards for whats expected of any web
+      application
+    </p>
+    <p>
+      Through these experiences. I've had the opportunity to create memorable
+      products with a neat and delightful user experience, written in code thats
+      maintaiable and easy to understand.
+    </p>
+  </div>
+  <section>
+    <h2>My skills</h2>
+    <p>
+      Besides the courses included in my degree, I've taken a number of online
+      courses such as <span class="course">CSS for Javascript Developers</span>,
+      and <span class="course">The Joy of React</span>.
+    </p>
+    <ul>
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>Javascript</li>
+      <li>Ruby</li>
+      <li>React</li>
+      <li>Astro</li>
+      <li>Ruby on Rails</li>
+      <li>Git</li>
+    </ul>
+  </section>
+  <section>
+    <h2>What I've been working on</h2>
+    <p>
+      I like to stay busy and always have a project on the works. Take a look at
+      some of the applications, articles and companies I've dedicated my time
+      to:
+    </p>
+    <ul>
+      <li>ByteBuddy</li>
+      <li>Ukko</li>
+      <li>Jose's Blog</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Let's build something together</h2>
+    <p>
+      Feel free to reach out if you're looking for a developer, have a question,
+      or just want to connect
+    </p>
+    <p>d.hdza19@gmail.com</p>
+  </section>
+</BaseLayout>
 
-<style>
-
-    .container {
-        display: flex;
-        justify-content: center;
-    }
-
-    @media screen and (max-width: 767px) {   
-        #dog{
-            width: 300px;
-            height: 250px;
-        } 
-    }
-
-    @media screen and (min-width: 768px) {      
-        #dog{      
-            width: 600px;
-            height: 500px;
-        } 
-    } 
-    @media (min-width: 992px) {      
-          #dog{        
-            width: 600px;
-            height: 500px;
-          } 
-    }
-    @media (min-width: 1200px) {    
-         #dog{         
-            width: 600px;
-            height: 500px;
-         } 
-    }
-
-</style>
+<style></style>
