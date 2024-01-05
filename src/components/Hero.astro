@@ -1,4 +1,5 @@
 ---
+
 ---
 
 <section class="hero">
@@ -44,14 +45,15 @@
   .type {
     font-family: monospace;
     color: #0000;
-    background: linear-gradient(-90deg, var(--dark-mode-white) 5px, #0000 0)
-        10px 0,
+    background:
+      linear-gradient(-90deg, var(--dark-mode-white) 5px, #0000 0) 10px 0,
       linear-gradient(var(--dark-mode-white) 0 0) 0 0;
     background-size: calc(var(--n) * 1ch) 200%;
     -webkit-background-clip: padding-box, text;
     background-clip: padding-box, text;
     background-repeat: no-repeat;
-    animation: b 0.7s infinite steps(1),
+    animation:
+      b 0.7s infinite steps(1),
       t calc(var(--n) * 0.3s) steps(var(--n)) forwards;
   }
   @keyframes t {
@@ -61,7 +63,9 @@
   }
   @keyframes b {
     50% {
-      background-position: 0 -100%, 0 0;
+      background-position:
+        0 -100%,
+        0 0;
     }
   }
 
