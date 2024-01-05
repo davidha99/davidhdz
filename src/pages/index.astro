@@ -1,52 +1,22 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/Hero.astro";
+import MySkills from "../components/MySkills.astro";
+import Projects from "../components/Projects.astro";
+import ContactMe from "../components/ContactMe.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-        <div class="container">
-            <img id="dog" src="/site-under-construction.png" alt="perrito albañil">
-        </div>
-	</body>
-</html>
+<BaseLayout title="David Hernandez">
+  <main class="wrapper">
+    <Hero />
+    <MySkills />
+    <!-- <Projects /> -->
+    <!-- <ContactMe /> -->
+  </main>
+</BaseLayout>
 
 <style>
-
-    .container {
-        display: flex;
-        justify-content: center;
-    }
-
-    @media screen and (max-width: 767px) {   
-        #dog{
-            width: 300px;
-            height: 250px;
-        } 
-    }
-
-    @media screen and (min-width: 768px) {      
-        #dog{      
-            width: 600px;
-            height: 500px;
-        } 
-    } 
-    @media (min-width: 992px) {      
-          #dog{        
-            width: 600px;
-            height: 500px;
-          } 
-    }
-    @media (min-width: 1200px) {    
-         #dog{         
-            width: 600px;
-            height: 500px;
-         } 
-    }
-
+  .wrapper {
+    height: 100%;
+  }
 </style>

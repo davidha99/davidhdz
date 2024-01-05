@@ -1,0 +1,66 @@
+---
+import { Hexagon } from "astro-feather-icons";
+---
+
+<div class="wrapper">
+  <h2 class="title">My skills</h2>
+  <p>
+    Besides the courses included in my degree, I've taken a number of online
+    courses such as <span class="course">CSS for Javascript Developers</span>,
+    and <span class="course">The Joy of React</span>.
+  </p>
+  <ul>
+    <li><span class="icon"><Hexagon /></span>HTML5</li>
+    <li><span class="icon"><Hexagon /></span>CSS3</li>
+    <li><span class="icon"><Hexagon /></span>Javascript</li>
+    <li><span class="icon"><Hexagon /></span>React</li>
+    <li><span class="icon"><Hexagon /></span>Astro</li>
+    <li><span class="icon"><Hexagon /></span>Git</li>
+    <li><span class="icon"><Hexagon /></span>Ruby</li>
+    <li><span class="icon"><Hexagon /></span>Ruby on Rails</li>
+  </ul>
+</div>
+<style>
+  .wrapper {
+    color: var(--dark-mode-light-green);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding-block-end: 2rem;
+  }
+
+  .title {
+    color: var(--dark-mode-gray);
+    font-size: 3rem;
+    font-weight: 800;
+  }
+
+  p {
+    text-align: center;
+    line-height: 2;
+    width: 65ch;
+  }
+
+  .course {
+    color: var(--dark-mode-yellow);
+    font-weight: 800;
+  }
+
+  ul {
+    columns: 4;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    padding-block: 8px;
+  }
+
+  .icon {
+    line-height: 0;
+    color: var(--dark-mode-yellow);
+  }
+</style>
