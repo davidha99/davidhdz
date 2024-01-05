@@ -1,50 +1,17 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/Hero.astro";
+import MySkills from "../components/MySkills.astro";
+import Projects from "../components/Projects.astro";
+import ContactMe from "../components/ContactMe.astro";
 ---
 
-<BaseLayout section-title="David Hernandez">
+<BaseLayout title="David Hernandez">
   <main class="wrapper">
     <Hero />
-    <section>
-      <h2 class="section-title">My skills</h2>
-      <p>
-        Besides the courses included in my degree, I've taken a number of online
-        courses such as <span class="course">CSS for Javascript Developers</span
-        >, and <span class="course">The Joy of React</span>.
-      </p>
-      <ul>
-        <li>HTML5</li>
-        <li>CSS3</li>
-        <li>Javascript</li>
-        <li>Ruby</li>
-        <li>React</li>
-        <li>Astro</li>
-        <li>Ruby on Rails</li>
-        <li>Git</li>
-      </ul>
-    </section>
-    <section>
-      <h2 class="section-title">What I've been working on</h2>
-      <p>
-        I like to stay busy and always have a project on the works. Take a look
-        at some of the applications, articles and companies I've dedicated my
-        time to:
-      </p>
-      <ul>
-        <li>ByteBuddy</li>
-        <li>Ukko</li>
-        <li>Jose's Blog</li>
-      </ul>
-    </section>
-    <section>
-      <h2 class="section-title">Let's build something together</h2>
-      <p>
-        Feel free to reach out if you're looking for a developer, have a
-        question, or just want to connect
-      </p>
-      <p>d.hdza19@gmail.com</p>
-    </section>
+    <MySkills />
+    <!-- <Projects /> -->
+    <!-- <ContactMe /> -->
   </main>
 </BaseLayout>
 
