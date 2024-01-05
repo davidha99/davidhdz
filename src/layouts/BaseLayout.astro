@@ -1,4 +1,6 @@
 ---
+// Supports weights 300-900
+import '@fontsource-variable/recursive';
 const { title } = Astro.props;
 ---
 
@@ -144,5 +146,25 @@ const { title } = Astro.props;
   table {
     border-collapse: collapse;
     border-spacing: 0;
+  }
+  html {
+    font-family: 'Recursive Variable', sans-serif;
+  }
+
+  html, body {
+    height: 100%;
+  }
+
+  html {
+    --dark-mode-green: #004643;
+    --dark-mode-white: #fffffe;
+    --dark-mode-light-green: #abd1c6;
+    --dark-mode-yellow: #f9bc60;
+    --dark-mode-dark-green: #001e1d;
+    --dark-mode-pink: #e16162,
+    --dark-mode-gray: #e8e4e6;
+
+    background-color: var(--dark-mode-green);
+    color: var(--dark-mode-white);
   }
 </style>

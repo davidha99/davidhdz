@@ -1,0 +1,79 @@
+---
+---
+
+<section class="hero">
+  <div class="headline">
+    <h1>
+      <span class="type" style="--n:53"
+        >Hi there, I'm David.<br />A Front-End Developer.</span
+      >
+    </h1>
+  </div>
+  <div class="intro-text">
+    <p>I'm a 24-year-old new graduate from Tec de Monterrey.</p>
+    <p>
+      As I've grown as a developer, I've worked alongside senior enigneers and
+      developers who have raised my standards for whats expected of any web
+      application
+    </p>
+    <p>
+      Through these experiences. I've had the opportunity to create memorable
+      products with a neat and delightful user experience, written in code thats
+      maintaiable and easy to understand.
+    </p>
+  </div>
+</section>
+<style>
+  .hero {
+    min-height: 95%;
+    isolation: isolate;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .headline h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    width: fit-content;
+    text-align: center;
+  }
+
+  .type {
+    font-family: monospace;
+    color: #0000;
+    background: linear-gradient(-90deg, var(--dark-mode-white) 5px, #0000 0)
+        10px 0,
+      linear-gradient(var(--dark-mode-white) 0 0) 0 0;
+    background-size: calc(var(--n) * 1ch) 200%;
+    -webkit-background-clip: padding-box, text;
+    background-clip: padding-box, text;
+    background-repeat: no-repeat;
+    animation: b 0.7s infinite steps(1),
+      t calc(var(--n) * 0.3s) steps(var(--n)) forwards;
+  }
+  @keyframes t {
+    from {
+      background-size: 0 200%;
+    }
+  }
+  @keyframes b {
+    50% {
+      background-position: 0 -100%, 0 0;
+    }
+  }
+
+  .intro-text {
+    columns: 2;
+  }
+
+  .intro-text p {
+    color: var(--dark-mode-light-green);
+    padding: 1rem;
+    break-inside: avoid;
+    width: 65ch;
+    line-height: 2;
+  }
+</style>
