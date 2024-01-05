@@ -2,17 +2,48 @@
 
 ---
 
-<div class="wrapper">
+<div class="contact-me">
   <h2 class="title">Let's build something together</h2>
   <p>
     Feel free to reach out if you're looking for a developer, have a question,
-    or just want to connect
+    or just want to connect.
   </p>
-  <p>d.hdza19@gmail.com</p>
+  <a href="mailto:d.hdza19@gmail.com" class="email">d.hdza19@gmail.com</a>
 </div>
 <style>
+  .contact-me {
+    min-height: 45%;
+    background: var(--dark-mode-light-green);
+    color: var(--dark-mode-dark-green-100);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding-block: 4rem;
+    text-align: justify;
+  }
+
   .title {
-    font-size: 3rem;
+    text-align: center;
+    color: var(--dark-mode-dark-green-200);
+    font-size: clamp(1.5rem, 9.3vw - 1.5rem, 2.75rem);
     font-weight: 800;
+  }
+
+  .contact-me p {
+    width: clamp(35ch, 80%, 65ch);
+    line-height: 2;
+    font-weight: 600;
+  }
+
+  .email {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--dark-mode-dark-green-100);
+    text-decoration: none;
+    padding-block-end: 6px;
+    border-bottom: 4px solid var(--dark-mode-dark-green-100);
+    transition: all 0.3s ease-in-out;
   }
 </style>

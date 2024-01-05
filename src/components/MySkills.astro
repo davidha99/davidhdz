@@ -22,12 +22,13 @@ import { Hexagon } from "astro-feather-icons";
 </div>
 <style>
   .my-skills {
+    min-height: 45%;
     color: var(--dark-mode-light-green);
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 3rem;
-    padding-block-end: 2rem;
+    padding-block-end: 6rem;
   }
 
   .title {
@@ -45,6 +46,7 @@ import { Hexagon } from "astro-feather-icons";
   .course {
     color: var(--dark-mode-yellow);
     font-weight: 800;
+    transition: all 0.3s ease-in-out;
   }
 
   .list {
@@ -63,6 +65,7 @@ import { Hexagon } from "astro-feather-icons";
   .icon {
     line-height: 0;
     color: var(--dark-mode-yellow);
+    transition: all 0.3s ease-in-out;
   }
 
   @media (max-width: 1100px) {
