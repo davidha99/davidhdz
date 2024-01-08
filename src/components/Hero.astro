@@ -10,31 +10,28 @@
       >
     </h1>
   </div>
-  <div class="intro-text">
-    <p>I'm a 24-year-old new graduate from Tec de Monterrey.</p>
-    <p>
-      As I've grown as a developer, I've worked alongside senior enigneers and
-      developers who have raised my standards for whats expected of any web
-      application
-    </p>
-    <p>
-      Through these experiences. I've had the opportunity to create memorable
-      products with a neat and delightful user experience, written in code thats
-      maintaiable and easy to understand.
-    </p>
-  </div>
+  <p>I'm a 24-year-old new graduate from Tec de Monterrey.</p>
+  <p>
+    As I've grown as a developer, I've worked alongside senior enigneers and
+    developers who have raised my standards for whats expected of any web
+    application.
+  </p>
+  <p>
+    Through these experiences. I've had the opportunity to create memorable
+    products with a neat and delightful user experience, written in code thats
+    maintainable and easy to understand.
+  </p>
 </div>
 <style>
   .hero {
-    text-align: justify;
-    width: 100%;
-    min-height: 95%;
     isolation: isolate;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    padding: 1.5rem;
+    padding-block-start: 3rem;
   }
 
   .headline h1 {
@@ -71,18 +68,10 @@
     }
   }
 
-  .intro-text {
+  p {
+    text-align: justify;
     color: var(--dark-mode-light-green);
     font-size: 1rem;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-
-  .intro-text p {
-    padding: 1rem;
     line-height: 2;
     width: clamp(35ch, 80%, 65ch);
   }
