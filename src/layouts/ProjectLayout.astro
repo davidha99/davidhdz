@@ -1,0 +1,50 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+
+const { title, description } = Astro.props;
+---
+
+<BaseLayout title={title}>
+  <div class="wrapper">
+    <div class="text-wrapper">
+      <h1 class="title" transition:name={title}>
+        {title}
+      </h1>
+      <p class="description" transition:name=`${title}-description`>
+        {description}
+      </p>
+      <slot />
+    </div>
+  </div>
+</BaseLayout>
+<style>
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .text-wrapper {
+    width: clamp(35ch, 80%, 65ch);
+    text-align: justify;
+    line-height: 2;
+  }
+
+  .title {
+    font-size: 4rem;
+    font-weight: 900;
+    text-align: center;
+    padding-block-start: 3rem;
+    padding-block-end: 1rem;
+    line-height: 1;
+  }
+
+  .description {
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: center;
+    padding-block-end: 4rem;
+    line-height: 1.25;
+  }
+</style>

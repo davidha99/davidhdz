@@ -1,22 +1,92 @@
 ---
-
+import Card from "../components/Card.astro";
+const projects = [
+  {
+    title: "ByteBuddy",
+    description:
+      "An AI customer service chatbot built with Next.js and Openai.",
+    imagePath: "/src/assets/bytebuddy.png",
+    altText: "ByteBuddy",
+    pagePath: "/bytebuddy",
+  },
+  // {
+  //   title: "Working at UKKO",
+  //   description:
+  //     "My experience as an intern at UKKO, a digital solution company.",
+  //   imagePath: "/src/assets/placeholder-img.png",
+  //   altText: "UKKO",
+  //   pagePath: "/ukko",
+  // },
+  // {
+  //   title: "Jose's Blog",
+  //   description: "A blog",
+  //   imagePath: "/src/assets/placeholder-img.png",
+  //   altText: "Jose's Blog",
+  //   pagePath: "/joseblog",
+  // },
+];
 ---
 
-<div class="wrapper">
+<div class="projects">
   <h2 class="title">What I've been working on</h2>
   <p>
     I like to stay busy and always have a project on the works. Take a look at
     some of the applications, articles and companies I've dedicated my time to:
   </p>
   <ul>
-    <li>ByteBuddy</li>
-    <li>Ukko</li>
-    <li>Jose's Blog</li>
+    {
+      projects.map(({ title, description, imagePath, altText, pagePath }) => (
+        <li>
+          <Card
+            title={title}
+            description={description}
+            imagePath={imagePath}
+            altText={altText}
+            pagePath={pagePath}
+          />
+        </li>
+      ))
+    }
   </ul>
 </div>
 <style>
+  .projects {
+    color: var(--dark-mode-light-green);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    text-align: justify;
+    padding: 1.5rem;
+    padding-block-end: 4rem;
+  }
+
   .title {
-    font-size: 3rem;
+    color: var(--dark-mode-gray);
+    font-size: clamp(1.5rem, 9.3vw - 1.5rem, 2.75rem);
     font-weight: 800;
+  }
+
+  p {
+    text-align: justify;
+    line-height: 2;
+    width: clamp(35ch, 80%, 65ch);
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--dark-mode-light-green);
+  }
+
+  ul {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    width: clamp(35ch, 80%, 65ch);
+  }
+
+  li {
+    flex: 1;
   }
 </style>
