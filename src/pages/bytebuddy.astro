@@ -1,12 +1,130 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+import ProjectLayout from "../layouts/ProjectLayout.astro";
+const title = "ByteBuddy";
+const description =
+  "An AI customer service chatbot built with Next.js and Openai.";
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/*.{jpeg,jpg,png,gif}",
+);
 ---
 
-<BaseLayout>
-  <h1 class="title" transition:name="ByteBuddy">ByteBuddy</h1>
-</BaseLayout>
+<ProjectLayout title={title} description={description}>
+  <section>
+    <p>
+      ByteBuddy is an AI customer service assistant that can answer questions
+      about ByteBazaar products and services. ByteBazaar is a fictional small
+      business that sells electronics and home appliances. This project required
+      a lot of heavy lifting to create a seamless chat user experience with a
+      responsive design in mind.
+    </p>
+  </section>
+  <section class="meta">
+    <div class="col type">
+      <h4>Type</h4>
+      <p>Personal Project</p>
+    </div>
+    <div class="col stack">
+      <h4>Stack</h4>
+      <ul class="stack-list">
+        <l1>Next.js</l1>
+        <l1>styled-components</l1>
+        <l1>Openai API</l1>
+        <l1>Vercel</l1>
+      </ul>
+    </div>
+    <div class="col live">
+      <h4>Live</h4>
+      <a href="https://byte-buddy.vercel.app">View Site</a>
+    </div>
+  </section>
+  <section>
+    <h2 class="subtitle">Project Purpose and Goal</h2>
+    <p>
+      This project included 3 phases and iterations for the complete chat user
+      experience. Phase 1 consisted simply in connecting the Openai API and
+      allowed the user to ask questions and receive answers. Phase 2 was quite
+      larger and was design to train the AI assistant to answer questions about
+      the business products with a warm welcome to start a friendly
+      conversation. Phase 3 was by far the largest and most complex, as it
+      includes the chat UI and functionality with a responsive design for any
+      screen size.
+    </p>
+  </section>
+  <section>
+    <h2 class="subtitle">Web Stack and Explanation</h2>
+    <p>
+      React made the most sense for the chat application because it required an
+      integration with Openai's API as well as a good user experience. React
+      hooks were used to manage the state of chat messages between the AI
+      assistant and the user. Also, styled-components was used for its CSS-in-JS
+      approach and simplicity to style with CSS. Lastly, Vercel was an obvious
+      choice for deployment because of its seamless integration with Next.js.
+    </p>
+  </section>
+  <section>
+    <h2 class="subtitle">Problems and Thought Process</h2>
+    <p>
+      Like most projects, I ran into a few bumps along the way, one particularly
+      difficult area was organization and structure of the code. Because of this
+      project's size, I realized how important maintaining an organized
+      structure would be.
+    </p>
+    <p>
+      I worked hard to keep components as reusable as possible and utilized
+      props for many slight variations. I also used styled-components to keep
+      styles organized and scoped to their respective components.
+    </p>
+  </section>
+  <section>
+    <h2 class="subtitle">Lessons Learned</h2>
+    <p>
+      I could spend all day talking about the lessons I learned while working on
+      this project, but the most important ones involved my newfound
+      understanding of React Hooks, Git version control and API integration. As
+      one of my first React projects, I learned a lot about the power of code
+      organization and structure. When I first began, I would write sloppy code
+      and move on, but now I know how doing so can come back to bite you later;
+      I now spend more time refactoring and improving every line of code I
+      write, for the best readability and far fewer headaches.
+    </p>
+  </section>
+</ProjectLayout>
 <style>
-  .title {
-    font-size: 3rem;
+  section:not(:first-of-type) {
+    padding-block: 1rem;
+  }
+
+  .meta {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .meta h4 {
+    color: var(--dark-mode-white);
+    font-weight: 900;
+  }
+
+  .col {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .stack-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .live a {
+    color: var(--dark-mode-yellow);
+    font-weight: 900;
+    width: fit-content;
+  }
+
+  .subtitle {
+    font-size: 1.75rem;
+    font-weight: 800;
   }
 </style>

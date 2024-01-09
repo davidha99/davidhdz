@@ -12,12 +12,12 @@ interface Props {
 
 const { title, description, imagePath, altText, pagePath } = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>(
-  "/src/assets/*.{jpeg,jpg,png,gif}",
+  "/src/assets/*.{avif,jpeg,jpg,png,gif}",
 );
 
 if (!images[imagePath])
   throw new Error(
-    `"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`,
+    `"${imagePath}" does not exist in glob: "src/assets/*.{avif,jpeg,jpg,png,gif}"`,
   );
 ---
 
@@ -25,7 +25,7 @@ if (!images[imagePath])
   <Image src={images[imagePath]()} alt={altText} />
   <div class="text">
     <h4 transition:name={title}>{title}</h4>
-    <p>{description}</p>
+    <p transition:name=`${title}-description`>{description}</p>
   </div>
   <a href={pagePath}>Read more</a>
 </div>
@@ -34,7 +34,7 @@ if (!images[imagePath])
     min-width: 250px;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1.25rem;
   }
 
   .text {
@@ -58,12 +58,17 @@ if (!images[imagePath])
     line-height: 2;
   }
 
+  .text p {
+    font-size: 0.875rem;
+  }
+
   .card a {
     width: fit-content;
     text-decoration: none;
     color: var(--dark-mode-white);
     padding: 0.5rem 1rem;
     border: 2px solid var(--dark-mode-dark-green-200);
+    font-weight: 500;
   }
 
   .card a:hover {
