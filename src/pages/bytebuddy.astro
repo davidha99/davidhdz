@@ -2,6 +2,7 @@
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
 import ProjectLayout from "../layouts/ProjectLayout.astro";
+import ContactMe from "../components/ContactMe.astro";
 const title = "ByteBuddy";
 const description =
   "An AI customer service chatbot built with Next.js and Openai.";
@@ -91,14 +92,19 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
     </p>
   </section>
 </ProjectLayout>
+<ContactMe />
 <style>
   section:not(:first-of-type) {
     padding-block: 1rem;
   }
 
+  section:is(:last-of-type) {
+    padding-block-end: 4rem;
+  }
+
   .meta {
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
   }
 
   .meta h4 {
