@@ -1,8 +1,119 @@
 ---
 import ProjectLayout from "../layouts/ProjectLayout.astro";
+import ContactMe from "../components/ContactMe.astro";
 const title = "Working at UKKO";
-const description =
-  "My experience as an intern at UKKO, a digital solution company.";
+const description = "My experience as a software engineer intern at UKKO";
 ---
 
-<ProjectLayout title={title} description={description} />
+<ProjectLayout title={title} description={description}>
+  <section>
+    <p>
+      <a href="https://ukko.mx/" target="_blank">UKKO</a> is a software
+      development company that focuses on building tools tailored to clients.
+      They offer a wide array of Software as a Service products and they're
+      doing a really good job at supporting different type of industries. I
+      worked at UKKO as a software engineer intern for 8 months.
+    </p>
+  </section>
+  <section class="meta">
+    <div class="col type">
+      <h4>Type</h4>
+      <p>Internship</p>
+    </div>
+    <div class="col stack">
+      <h4>Stack</h4>
+      <p>I contributed on projects with the following stack:</p>
+      <ul class="stack-list">
+        <l1>HTML/CSS</l1>
+        <l1>Bootstrap</l1>
+        <l1>TailwindCSS</l1>
+        <l1>Stimulus.js</l1>
+        <l1>Ruby on Rails</l1>
+        <l1>PostgreSQL</l1>
+      </ul>
+    </div>
+  </section>
+  <section>
+    <h2 class="subtitle">Web Stack and Explanation</h2>
+    <p>
+      At first I was a little bit skeptical about Ruby on Rails, I thought that
+      because it's an old technology it was not relevant anymore. But I was
+      surprised about how easy and fast it is to build things with it. I think
+      Rails is still relevant because it has a great community and even though
+      it's old, it has been able to keep up with new trends: it's like a grandpa
+      that knows how to use TikTok! Later, I understood that Rails was great for
+      UKKO because they needed to give value to their clients as fast as
+      possible.
+    </p>
+  </section>
+  <section>
+    <h2 class="subtitle">Problems and Thought Process</h2>
+    <p>
+      When I joined UKKO, I didn't know much about Ruby on Rails and I had to
+      learn a lot of things on the go. I was able to ask questions whenever I
+      needed and they were always willing to help me. Whenever I was stuck on
+      something, I'd set a timer to do my research and try to solve it by myself
+      first. If I wasn't able to solve it before the timer ended, I'd ask for
+      help. I think this is a great way to learn because it forces you to think
+      about the problem and try to solve it by yourself. If you can't solve it,
+      then you can ask for help and learn from the solution without wasting too
+      much time.
+    </p>
+  </section>
+  <section>
+    <h2 class="subtitle">Lessons Learned</h2>
+    <p>
+      <strong>Planning and documentation are key to success.</strong> Before
+      starting to code a new feature I always made sure to have a clear
+      understanding of what I was going to build. I'd achieve that by dividing
+      the feature into smaller tasks and documenting each one of them. Because
+      of this, I was able to give much more accurate time estimates.
+    </p>
+  </section>
+</ProjectLayout>
+<ContactMe />
+<style>
+  section:not(:first-of-type) {
+    padding-block: 1rem;
+  }
+
+  section:is(:last-of-type) {
+    padding-block-end: 4rem;
+  }
+
+  strong {
+    font-weight: 750;
+  }
+
+  .meta {
+    display: flex;
+    gap: 3rem;
+  }
+
+  .meta h4 {
+    color: var(--dark-mode-white);
+    font-weight: 900;
+  }
+
+  .col {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .stack-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  a {
+    color: var(--dark-mode-yellow);
+    font-weight: 900;
+    width: fit-content;
+  }
+
+  .subtitle {
+    font-size: 1.75rem;
+    font-weight: 800;
+  }
+</style>

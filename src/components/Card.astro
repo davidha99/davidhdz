@@ -22,7 +22,9 @@ if (!images[imagePath])
 ---
 
 <div class="card">
-  <Image src={images[imagePath]()} alt={altText} />
+  <div class="image-background">
+    <Image src={images[imagePath]()} alt={altText} />
+  </div>
   <div class="text">
     <h4 transition:name={title}>{title}</h4>
     <p transition:name=`${title}-description`>{description}</p>
@@ -35,6 +37,11 @@ if (!images[imagePath])
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
+  }
+
+  .image-background {
+    border: 2px solid var(--dark-mode-dark-green-200);
+    line-height: 0;
   }
 
   .text {
