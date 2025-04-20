@@ -1,23 +1,25 @@
 {
-  "name": "davidhdz-com",
-  "type": "module",
-  "version": "0.0.1",
+  "name": "davidhdz",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "@astrojs/mdx": "^0.19.7",
-    "@astrojs/partytown": "^2.0.4",
-    "@fontsource-variable/recursive": "^5.0.16",
-    "astro": "^4.0.0",
-    "astro-feather-icons": "^1.0.2"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "next": "15.3.1"
   },
   "devDependencies": {
-    "prettier": "^3.0.0",
-    "prettier-plugin-astro": "^0.11.0"
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.1",
+    "@eslint/eslintrc": "^3"
   }
 }
